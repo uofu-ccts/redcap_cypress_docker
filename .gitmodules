@@ -6,4 +6,4 @@
 	url = git@github.com:aldefouw/redcap_docker.git
 [submodule "redcap_rsvc"]
 	path = redcap_rsvc
-	url = git@github.com:aldefouw/redcap_rsvc.git
+	url = git@github.com:4bbakers/redcap_rsvc.git
