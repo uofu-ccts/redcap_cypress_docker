@@ -10,7 +10,7 @@ module.exports = defineConfig({
             require('rctf/plugins/index.js')(on, config)
             return config
         },
-        baseUrl: 'http://localhost:8080',
+        baseUrl: 'http://localhost:8888',
         stepDefinitions: 'cypress/support/step_definitions',
         specPattern: [ 'cypress/features/*.feature',
                        'redcap_rsvc/*/[ABC]/*/*.feature',
