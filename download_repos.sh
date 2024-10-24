@@ -9,5 +9,5 @@ cp ./config/cypress.env.json ./redcap_cypress/cypress.env.json
 
 #Install the REDCap RSVC repository so automated feature tests can run
 cd redcap_cypress || exit
-git clone git@github.com:4bbakers/redcap_rsvc.git
-git submodule add git@github.com:4bbakers/redcap_rsvc.git redcap_rsvc
+git clone git@github.com:schatto1/redcap_rsvc.git
+git submodule add git@github.com:schatto1/redcap_rsvc.git redcap_rsvc
