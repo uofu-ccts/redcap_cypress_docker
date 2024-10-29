@@ -1,9 +1,11 @@
 [submodule "redcap_cypress"]
 	path = redcap_cypress
 	url = git@github.com:schatto1/redcap_cypress.git
+    branch = utah-v14.5.5
 [submodule "redcap_docker"]
 	path = redcap_docker
 	url = git@github.com:schatto1/redcap_docker.git
 [submodule "redcap_rsvc"]
 	path = redcap_rsvc
 	url = git@github.com:schatto1/redcap_rsvc.git
+    branch = utah-v14.5.5
