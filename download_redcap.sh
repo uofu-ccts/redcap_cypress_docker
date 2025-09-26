@@ -71,7 +71,8 @@ attempt_unzip_redcap() {
                 fi
 
                 echo "Configuring Cypress to use REDCap v${redcap_version}"
-                sed -i '/  "redcap_version": ".*",/c\  "redcap_version": "'${redcap_version}'",' redcap_cypress/cypress.env.json
+                sed -i '' 's/"redcap_version": ".*"/"redcap_version": "'${redcap_version}'"/g' redcap_cypress/cypress.env.json
+                # sed -i '' '/  "redcap_version": ".*",/c\  "redcap_version": "'${redcap_version}'",' redcap_cypress/cypress.env.json
 
             else
                 echo "Failed to unzip the file."
@@ -110,7 +111,7 @@ CURRENT_VERSION=$(echo $CYPRESS_REDCAP_VERSION_LINE | sed -n 's/.*"redcap_versio
 
 
 # Replace the version without prompting the user
-error=$(find "${CYPRESS_ENV_FILE}" -type f -exec sed -i -e "s/$CURRENT_VERSION/${redcap_version}/g" {} \;) || echo "FAILED:\n$error"
+error=$(find "${CYPRESS_ENV_FILE}" -type f -exec sed -i '' -e "s/$CURRENT_VERSION/${redcap_version}/g" {} \;) || echo "FAILED:\n$error"
 
 # Zip file
 zip_file="./redcap${redcap_version}.zip"
