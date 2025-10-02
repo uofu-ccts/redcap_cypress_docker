@@ -3,8 +3,8 @@
 set -e
 
 if [ ! -d "redcap_cypress" ]; then
-    git clone git@github.com:vanderbilt-redcap/redcap_cypress.git
-    git clone git@github.com:vanderbilt-redcap/redcap_docker.git
+    git clone -b utah-v15.5.7 git@github.com:uofu-ccts/redcap_cypress.git
+    git clone -b utah-v15.5.7 git@github.com:uofu-ccts/redcap_docker.git
 
     #Move Base Configurations for Cypress
     cp ./redcap_cypress/cypress.config.js.example ./redcap_cypress/cypress.config.js
@@ -12,7 +12,7 @@ if [ ! -d "redcap_cypress" ]; then
 
     #Install the REDCap RSVC repository so automated feature tests can run
     cd redcap_cypress
-    git clone git@github.com:vanderbilt-redcap/redcap_rsvc.git
+    git clone -b utah-v15.5.7 git@github.com:uofu-ccts/redcap_rsvc.git
     cd ..
 fi
 
