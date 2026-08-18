@@ -12,7 +12,7 @@ oldUpdateScriptInfo=`getUpdateScriptInfo`
 echo
 echo Updating redcap_cypress_docker...
 git pull
-git fetch https://github.com/vanderbilt-redcap/redcap_cypress_docker main
+git fetch https://github.com/uofu-ccts/redcap_cypress_docker main
 commitsBehindMain=`git log --oneline ..FETCH_HEAD | wc -l`
 if [ $commitsBehindMain != 0 ]; then
     echo
@@ -29,7 +29,7 @@ fi
 echo
 echo Updating redcap_rsvc...
 cd redcap_cypress/redcap_rsvc
-git fetch https://github.com/vanderbilt-redcap/redcap_rsvc staging
+git fetch https://github.com/uofu-ccts/redcap_rsvc staging
 rsvcBranchName=`git rev-parse --abbrev-ref HEAD`
 if [ "$rsvcBranchName" = "staging" ]; then
     # Developers shouldn't be working directly in this branch.
@@ -52,7 +52,7 @@ echo
 echo Updating redcap_cypress...
 cd redcap_cypress
 git pull
-git fetch https://github.com/vanderbilt-redcap/redcap_cypress master
+git fetch https://github.com/uofu-ccts/redcap_cypress master
 commitsBehindMaster=`git log --oneline ..FETCH_HEAD | wc -l`
 if [ $commitsBehindMaster != 0 ]; then
     echo
@@ -70,7 +70,7 @@ echo
 echo Updating redcap_docker...
 cd redcap_docker
 git pull
-git fetch https://github.com/vanderbilt-redcap/redcap_docker main
+git fetch https://github.com/uofu-ccts/redcap_docker main
 commitsBehindMain=`git log --oneline ..FETCH_HEAD | wc -l`
 if [ $commitsBehindMain != 0 ]; then
     echo
