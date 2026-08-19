@@ -12,7 +12,7 @@ oldUpdateScriptInfo=`getUpdateScriptInfo`
 echo
 echo Updating redcap_cypress_docker...
 git pull
-git fetch https://github.com/uofu-ccts/redcap_cypress_docker main
+git fetch https://github.com/uofu-ccts/redcap_cypress_docker utah-v17.3.5
 commitsBehindMain=`git log --oneline ..FETCH_HEAD | wc -l`
 if [ $commitsBehindMain != 0 ]; then
     echo
@@ -52,7 +52,7 @@ echo
 echo Updating redcap_cypress...
 cd redcap_cypress
 git pull
-git fetch https://github.com/uofu-ccts/redcap_cypress master
+git fetch https://github.com/uofu-ccts/redcap_cypress utah-v17.3.5
 commitsBehindMaster=`git log --oneline ..FETCH_HEAD | wc -l`
 if [ $commitsBehindMaster != 0 ]; then
     echo
