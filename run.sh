@@ -3,7 +3,7 @@
 set -e
 
 if [ ! -d "redcap_cypress" ]; then
-    git clone git@github.com:uofu-ccts/redcap_cypress.git
+    git clone --branch utah-v17.3.5 git@github.com:uofu-ccts/redcap_cypress.git
     git clone git@github.com:uofu-ccts/redcap_docker.git
 
     #Move Base Configurations for Cypress
