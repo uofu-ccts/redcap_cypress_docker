@@ -70,11 +70,11 @@ echo
 echo Updating redcap_docker...
 cd redcap_docker
 git pull
-git fetch https://github.com/uofu-ccts/redcap_docker main
-commitsBehindMain=`git log --oneline ..FETCH_HEAD | wc -l`
-if [ $commitsBehindMain != 0 ]; then
+git fetch https://github.com/uofu-ccts/redcap_docker utah-v17.3.6
+commitsBehindUtah=`git log --oneline ..FETCH_HEAD | wc -l`
+if [ $commitsBehindUtah != 0 ]; then
     echo
-    echo Please either checkout the main branch for redcap_docker, or merge it into your working branch.
+    echo Please either checkout the utah-v17.3.6 branch for redcap_docker, or merge it into your working branch.
     exit
 fi
 

@@ -4,7 +4,7 @@ set -e
 
 if [ ! -d "redcap_cypress" ]; then
     git clone --branch utah-v17.3.6 git@github.com:uofu-ccts/redcap_cypress.git
-    git clone git@github.com:uofu-ccts/redcap_docker.git
+    git clone --branch utah-v17.3.6 git@github.com:uofu-ccts/redcap_docker.git
 
     #Move Base Configurations for Cypress
     cp ./redcap_cypress/cypress.config.js.example ./redcap_cypress/cypress.config.js
